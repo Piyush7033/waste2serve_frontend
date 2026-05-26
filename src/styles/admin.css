@@ -1,0 +1,137 @@
+.admin-dashboard {
+    padding: 30px;
+    background: linear-gradient(135deg, #f5f7fb, #eef2f7);
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* TITLE */
+.admin-dashboard h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #111827;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+/* TABLE CONTAINER LOOK */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* HEADER */
+.admin-table thead {
+    background: #111827;
+    color: white;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* ROW STYLE */
+.admin-table tr {
+    border-bottom: 1px solid #e5e7eb;
+    transition: 0.2s;
+}
+
+.admin-table tr:hover {
+    background: #f9fafb;
+    transform: scale(1.01);
+}
+
+/* BUTTONS */
+.approve-btn {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    margin-right: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.approve-btn:hover {
+    background: #15803d;
+    transform: scale(1.05);
+}
+
+.reject-btn {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.reject-btn:hover {
+    background: #b91c1c;
+    transform: scale(1.05);
+}
+
+/* STATUS BADGES */
+.status {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* PENDING */
+.pending {
+    background: #fef08a;
+    color: #92400e;
+}
+
+/* APPROVED */
+.approved {
+    background: #86efac;
+    color: #14532d;
+}
+
+/* REJECTED */
+.rejected {
+    background: #fca5a5;
+    color: #7f1d1d;
+}
+
+/* NO DATA */
+.no-data {
+    padding: 25px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .admin-table {
+        font-size: 13px;
+    }
+
+    .approve-btn,
+    .reject-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .admin-dashboard h2 {
+        font-size: 26px;
+    }
+}

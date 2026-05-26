@@ -1,0 +1,164 @@
+/* =========================
+   ADMIN NAVBAR
+========================= */
+
+.admin-navbar {
+  width: 100%;
+  min-height: 78px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  box-shadow: 0 14px 40px rgba(15, 82, 214, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  gap: 18px;
+  border-bottom: 1px solid rgba(15, 82, 214, 0.08);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.admin-navbar-title {
+  margin: 0;
+  font-size: 24px;
+  color: #0c2f7a;
+  font-weight: 700;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar-eyebrow {
+  margin: 0 0 4px;
+  color: #0f4fbd;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(15, 82, 214, 0.16);
+  background: #f4f7ff;
+  color: #0f4fbd;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.search-toggle:hover {
+  background: #e8efff;
+  transform: translateY(-1px);
+}
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  border: 1px solid rgba(15, 82, 214, 0.16);
+  background: #ffffff;
+  color: #0f4fbd;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 20px rgba(15, 82, 214, 0.12);
+}
+
+
+.profile-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #eef4ff;
+  color: #0d3f90;
+  font-weight: 600;
+  border: 1px solid rgba(15, 82, 214, 0.16);
+}
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+
+.logout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  background: #e33d5a;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.logout-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(227, 61, 90, 0.2);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 900px) {
+  .admin-navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 20px;
+  }
+
+  .navbar-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .admin-navbar {
+    gap: 12px;
+  }
+
+  .admin-navbar-title {
+    font-size: 20px;
+  }
+
+  .search-toggle,
+  .logout-btn,
+  .profile-pill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .icon-btn {
+    width: 42px;
+    height: 42px;
+  }
+}

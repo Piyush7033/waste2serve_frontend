@@ -1,0 +1,452 @@
+/* =========================================================
+   ADD FOOD — BLUE & WHITE THEME
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+  --af-blue-900: #1e3a8a;
+  --af-blue-800: #1e40af;
+  --af-blue-700: #1d4ed8;
+  --af-blue-600: #2563eb;
+  --af-blue-500: #3b82f6;
+  --af-blue-400: #60a5fa;
+  --af-blue-100: #dbeafe;
+  --af-blue-50:  #eff6ff;
+  --af-white:    #ffffff;
+  --af-gray-50:  #f8fafc;
+  --af-gray-100: #f1f5f9;
+  --af-gray-200: #e2e8f0;
+  --af-gray-400: #94a3b8;
+  --af-gray-600: #475569;
+  --af-gray-900: #0f172a;
+  --af-red-500:  #ef4444;
+  --af-red-50:   #fef2f2;
+  --af-green-600:#16a34a;
+  --af-green-50: #f0fdf4;
+  --af-green-100:#dcfce7;
+}
+
+/* =========================================================
+   PAGE — SPLIT LAYOUT
+========================================================= */
+
+.af-page {
+  min-height: 100vh;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================================================
+   LEFT PANEL
+========================================================= */
+
+.af-left {
+  width: 42%;
+  background: var(--af-blue-800);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 48px;
+  overflow: hidden;
+}
+
+/* Decorative circles */
+
+.af-left::before {
+  content: "";
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 380px; height: 380px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.af-left::after {
+  content: "";
+  position: absolute;
+  bottom: -80px; left: -80px;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Inner glow */
+
+.af-left-content {
+  position: relative;
+  z-index: 1;
+  max-width: 340px;
+}
+
+.af-left-icon {
+  width: 88px; height: 88px;
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--af-white);
+  margin-bottom: 32px;
+  backdrop-filter: blur(8px);
+}
+
+.af-left-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--af-white);
+  line-height: 1.15;
+  margin: 0 0 16px;
+  letter-spacing: -0.5px;
+}
+
+.af-left-sub {
+  font-size: 0.9rem;
+  color: rgba(219, 234, 254, 0.7);
+  line-height: 1.75;
+  margin: 0 0 40px;
+}
+
+/* STEPS */
+
+.af-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.af-step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.af-step-num {
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--af-blue-100);
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+.af-step-text {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(219, 234, 254, 0.85);
+}
+
+/* =========================================================
+   RIGHT PANEL
+========================================================= */
+
+.af-right {
+  flex: 1;
+  background: var(--af-gray-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+  overflow-y: auto;
+}
+
+.af-form-wrap {
+  width: 100%;
+  max-width: 520px;
+  background: var(--af-white);
+  border-radius: 24px;
+  border: 1.5px solid var(--af-gray-200);
+  box-shadow: 0 8px 40px rgba(30, 58, 138, 0.1);
+  overflow: hidden;
+}
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.af-form-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid var(--af-gray-100);
+  background: var(--af-blue-50);
+}
+
+.af-form-header-icon {
+  width: 46px; height: 46px;
+  background: var(--af-blue-600);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--af-white);
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.af-form-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--af-blue-900);
+  margin: 0 0 3px;
+}
+
+.af-form-sub {
+  font-size: 0.75rem;
+  color: var(--af-gray-400);
+  margin: 0;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.af-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 28px 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.af-alert-success {
+  background: var(--af-green-50);
+  color: var(--af-green-600);
+  border: 1.5px solid var(--af-green-100);
+}
+
+.af-alert-error {
+  background: var(--af-red-50);
+  color: var(--af-red-500);
+  border: 1.5px solid #fecaca;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.af-form {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* FIELD */
+
+.af-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+}
+
+.af-field label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: var(--af-blue-700);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.af-field label svg {
+  color: var(--af-blue-500);
+  flex-shrink: 0;
+}
+
+.af-field input,
+.af-field textarea {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1.5px solid var(--af-gray-200);
+  background: var(--af-gray-50);
+  font-size: 0.9rem;
+  color: var(--af-gray-900);
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.af-field textarea {
+  resize: vertical;
+  min-height: 90px;
+  line-height: 1.6;
+}
+
+.af-field input::placeholder,
+.af-field textarea::placeholder {
+  color: var(--af-gray-400);
+  font-size: 0.87rem;
+}
+
+.af-field input:focus,
+.af-field textarea:focus {
+  border-color: var(--af-blue-500);
+  background: var(--af-white);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.af-field input[type="datetime-local"] {
+  cursor: pointer;
+  color-scheme: light;
+}
+
+/* FIELD ROW — 2 columns */
+
+.af-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.af-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.af-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.af-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.af-btn-reset {
+  flex: 1;
+  background: var(--af-gray-100);
+  color: var(--af-gray-600);
+  border: 1.5px solid var(--af-gray-200);
+}
+
+.af-btn-reset:hover {
+  background: var(--af-gray-200);
+  color: var(--af-gray-900);
+  transform: translateY(-1px);
+}
+
+.af-btn-submit {
+  flex: 2;
+  background: var(--af-blue-600);
+  color: var(--af-white);
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.3);
+}
+
+.af-btn-submit:hover:not(:disabled) {
+  background: var(--af-blue-700);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(37, 99, 235, 0.4);
+}
+
+.af-btn-submit:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* SPINNER inside button */
+
+.af-spinner {
+  width: 15px; height: 15px;
+  border: 2.5px solid rgba(255,255,255,0.35);
+  border-top-color: var(--af-white);
+  border-radius: 50%;
+  animation: af-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes af-spin { to { transform: rotate(360deg); } }
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .af-page {
+    flex-direction: column;
+  }
+
+  .af-left {
+    width: 100%;
+    padding: 48px 32px 56px;
+  }
+
+  .af-left-content {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .af-left-icon  { margin-bottom: 0; }
+  .af-left-title { font-size: 1.9rem; }
+  .af-steps      { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; }
+
+  .af-right {
+    padding: 40px 24px 48px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .af-left { padding: 40px 24px 52px; }
+
+  .af-left-content {
+    grid-template-columns: 1fr;
+  }
+
+  .af-left-title { font-size: 1.7rem; }
+
+  .af-steps { flex-direction: column; }
+
+  .af-field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .af-form-wrap  { border-radius: 20px; }
+
+  .af-form,
+  .af-form-header { padding-left: 20px; padding-right: 20px; }
+
+  .af-alert { margin-left: 20px; margin-right: 20px; }
+
+  .af-right { padding: 28px 16px 40px; }
+}

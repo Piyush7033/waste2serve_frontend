@@ -1,0 +1,208 @@
+.dashboard-container {
+  min-height: 100vh;
+  background: #f4f7fb;
+  padding: 20px;
+}
+
+/* ================= HEADER ================= */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.dashboard-subtitle {
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.dashboard-role {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+/* ================= CARDS ================= */
+
+.dashboard-card {
+  padding: 25px;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+.dashboard-card p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.dashboard-card h2 {
+  font-size: 2.2rem;
+  margin-top: 10px;
+}
+
+.dashboard-card span {
+  font-size: 3rem;
+}
+
+.users-card {
+  background: linear-gradient(135deg,#3b82f6,#2563eb);
+}
+
+.donor-card {
+  background: linear-gradient(135deg,#10b981,#059669);
+}
+
+.receiver-card {
+  background: linear-gradient(135deg,#ec4899,#db2777);
+}
+
+.food-card {
+  background: linear-gradient(135deg,#f59e0b,#d97706);
+}
+
+/* ================= REQUEST CARDS ================= */
+
+.request-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.request-card:hover {
+  transform: translateY(-5px);
+}
+
+.request-card h2 {
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.pending {
+  border-top: 6px solid #f59e0b;
+}
+
+.approved {
+  border-top: 6px solid #10b981;
+}
+
+.completed {
+  border-top: 6px solid #3b82f6;
+}
+
+.available {
+  border-top: 6px solid #8b5cf6;
+}
+
+/* ================= SECTION ================= */
+
+.dashboard-section {
+  margin-top: 30px;
+}
+
+.section-title {
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* ================= ACTION GRID ================= */
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+}
+
+.action-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #111827;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.action-card:hover {
+  transform: translateY(-6px);
+  color: #2563eb;
+}
+
+.action-card span {
+  font-size: 2.5rem;
+}
+
+.action-card h5 {
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+.action-card p {
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+/* ================= WELCOME ================= */
+
+.welcome-card {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.donor-welcome {
+  border-left: 8px solid #10b981;
+}
+
+.receiver-welcome {
+  border-left: 8px solid #ec4899;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .dashboard-title {
+    font-size: 1.5rem;
+  }
+
+}

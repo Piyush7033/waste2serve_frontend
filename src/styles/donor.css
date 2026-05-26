@@ -1,0 +1,464 @@
+/* =========================================================
+   GLOBAL DONOR PAGE STYLING
+========================================================= */
+
+.donor-container,
+.donor-form-container,
+.donor-list {
+  min-height: 100vh;
+
+  padding: 40px 20px;
+
+  font-family: "Poppins", sans-serif;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(59, 130, 246, 0.18),
+      transparent 35%),
+
+    radial-gradient(circle at bottom right,
+      rgba(34, 197, 94, 0.15),
+      transparent 35%),
+
+    linear-gradient(
+      135deg,
+      #0f172a,
+      #111827,
+      #020617
+    );
+
+  color: white;
+}
+
+/* =========================================================
+   TITLES
+========================================================= */
+
+.donor-title,
+.donor-form-container h2,
+.donor-list h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+
+  margin-bottom: 15px;
+
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #22c55e
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SUBTITLE */
+
+.donor-subtitle {
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 35px;
+  font-size: 1rem;
+}
+
+/* =========================================================
+   STATS SECTION
+========================================================= */
+
+.donor-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+  margin: 30px 0 50px;
+}
+
+.stat-card {
+  min-width: 160px;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  backdrop-filter: blur(12px);
+
+  text-align: center;
+
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 15px 35px rgba(56,189,248,0.18);
+}
+
+.stat-card h3 {
+  margin-top: 8px;
+  font-size: 1.4rem;
+}
+
+/* =========================================================
+   DASHBOARD GRID
+========================================================= */
+
+.donor-grid {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 25px;
+}
+
+/* =========================================================
+   DASHBOARD CARDS
+========================================================= */
+
+.donor-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 30px 24px;
+
+  border-radius: 20px;
+
+  text-decoration: none;
+  color: white;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.35);
+
+  transition: 0.35s ease;
+}
+
+/* Glow layer */
+
+.donor-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(56,189,248,0.12),
+      rgba(34,197,94,0.12)
+    );
+
+  opacity: 0;
+
+  transition: 0.3s ease;
+}
+
+.donor-card:hover::before {
+  opacity: 1;
+}
+
+.donor-card:hover {
+  transform:
+    translateY(-8px)
+    scale(1.02);
+
+  box-shadow:
+    0 20px 50px rgba(34,197,94,0.18);
+}
+
+/* CARD ICON */
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.donor-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 520px;
+
+  padding: 35px;
+
+  border-radius: 28px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.35);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  animation: fadeIn 0.6s ease;
+}
+
+/* =========================================================
+   INPUTS + TEXTAREA
+========================================================= */
+
+.donor-form input,
+.donor-form textarea {
+  width: 100%;
+
+  padding: 15px 18px;
+
+  border-radius: 14px;
+  border: 1px solid transparent;
+
+  outline: none;
+
+  background: rgba(255,255,255,0.08);
+
+  color: white;
+
+  font-size: 1rem;
+
+  transition: 0.3s ease;
+}
+
+/* TEXTAREA */
+
+.donor-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* PLACEHOLDER */
+
+.donor-form input::placeholder,
+.donor-form textarea::placeholder {
+  color: #cbd5e1;
+}
+
+/* FOCUS */
+
+.donor-form input:focus,
+.donor-form textarea:focus {
+  background: rgba(255,255,255,0.14);
+
+  border-color: #38bdf8;
+
+  box-shadow:
+    0 0 12px rgba(56,189,248,0.35);
+
+  transform: translateY(-2px);
+}
+
+/* DATE INPUT */
+
+.donor-form input[type="datetime-local"] {
+  color-scheme: dark;
+  cursor: pointer;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.donor-form button {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0ea5e9,
+      #22c55e
+    );
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 8px 20px rgba(14,165,233,0.25);
+}
+
+.donor-form button:hover {
+  transform:
+    translateY(-3px)
+    scale(1.02);
+
+  box-shadow:
+    0 12px 28px rgba(34,197,94,0.35);
+}
+
+.donor-form button:active {
+  transform: scale(0.98);
+}
+
+/* =========================================================
+   DONOR LIST CARD
+========================================================= */
+
+.donor-item {
+  width: 100%;
+  max-width: 550px;
+
+  margin-bottom: 20px;
+
+  padding: 22px;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.3);
+
+  transition: 0.3s ease;
+}
+
+.donor-item:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(56,189,248,0.25);
+}
+
+/* ITEM TEXT */
+
+.donor-item h3 {
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.donor-item p {
+  margin: 6px 0;
+  color: #e2e8f0;
+}
+
+/* =========================================================
+   STATUS BADGES
+========================================================= */
+
+.status {
+  display: inline-block;
+
+  margin-top: 10px;
+
+  padding: 6px 14px;
+
+  border-radius: 30px;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* AVAILABLE */
+
+.status-available {
+  background: rgba(34,197,94,0.18);
+
+  color: #22c55e;
+
+  border: 1px solid #22c55e;
+}
+
+/* DONATED */
+
+.status-donated {
+  background: rgba(239,68,68,0.18);
+
+  color: #ef4444;
+
+  border: 1px solid #ef4444;
+}
+
+/* REQUESTED */
+
+.status-requested {
+  background: rgba(245,158,11,0.18);
+
+  color: #f59e0b;
+
+  border: 1px solid #f59e0b;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .donor-title,
+  .donor-form-container h2,
+  .donor-list h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .donor-form {
+    padding: 25px;
+  }
+
+  .donor-card {
+    padding: 24px;
+  }
+
+  .donor-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+}

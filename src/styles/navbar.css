@@ -1,0 +1,373 @@
+/* =========================================================
+   NAVBAR — BLUE & WHITE THEME
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.nb-nav {
+  background: #ffffff;
+  border-bottom: 1.5px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 16px rgba(30, 58, 138, 0.07);
+  font-family: "Poppins", sans-serif;
+}
+
+.nb-container {
+  max-width: 1200px;
+  width: 92%;
+  margin: 0 auto;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.nb-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.nb-logo-icon {
+  width: 34px; height: 34px;
+  background: #2563eb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  flex-shrink: 0;
+}
+
+.nb-logo span {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  letter-spacing: -0.3px;
+}
+
+.nb-logo:hover .nb-logo-icon { background: #1d4ed8; }
+.nb-logo:hover span           { color: #1d4ed8; }
+
+/* =========================================================
+   DESKTOP NAV LINKS
+========================================================= */
+
+.nb-links-wrap {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+.nb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: #475569;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.nb-link:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.nb-link-active {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.nb-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* USER CHIP */
+
+.nb-user-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 50px;
+  padding: 5px 14px 5px 5px;
+}
+
+.nb-user-avatar {
+  width: 28px; height: 28px;
+  background: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.nb-user-avatar.lg {
+  width: 40px; height: 40px;
+  font-size: 1rem;
+}
+
+.nb-user-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* REGISTER BUTTON */
+
+.nb-btn-register {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.83rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.18s ease;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+}
+
+.nb-btn-register:hover {
+  background: #1d4ed8;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(37,99,235,0.35);
+}
+
+/* LOGOUT BUTTON */
+
+.nb-btn-logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #ef4444;
+  border: 1.5px solid #fecaca;
+  font-size: 0.83rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap;
+}
+
+.nb-btn-logout:hover {
+  background: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(239,68,68,0.25);
+}
+
+/* HAMBURGER */
+
+.nb-hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  color: #1e3a8a;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  flex-shrink: 0;
+}
+
+.nb-hamburger:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #2563eb;
+}
+
+/* =========================================================
+   MOBILE DRAWER
+========================================================= */
+
+.nb-drawer {
+  position: absolute;
+  left: 0;
+  top: 64px;
+  width: 100%;
+  background: #ffffff;
+  border-top: 1.5px solid #e2e8f0;
+  padding: 16px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 8px 24px rgba(30,58,138,0.1);
+  animation: nb-slide 0.2s ease;
+  z-index: 998;
+}
+
+@keyframes nb-slide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* DRAWER USER */
+
+.nb-drawer-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border-radius: 14px;
+  border: 1.5px solid #e2e8f0;
+  margin-bottom: 4px;
+}
+
+.nb-drawer-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0;
+}
+
+.nb-drawer-role {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 2px 0 0;
+}
+
+/* DRAWER DIVIDER */
+
+.nb-drawer-divider {
+  height: 1px;
+  background: #f1f5f9;
+  margin: 6px 0;
+}
+
+/* DRAWER LINKS */
+
+.nb-drawer-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #475569;
+  transition: all 0.18s ease;
+}
+
+.nb-drawer-link:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.nb-drawer-active {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.nb-drawer-register {
+  background: #2563eb;
+  color: #ffffff !important;
+  justify-content: center;
+  margin-top: 4px;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+}
+
+.nb-drawer-register:hover {
+  background: #1d4ed8 !important;
+  color: #ffffff !important;
+}
+
+/* DRAWER LOGOUT */
+
+.nb-drawer-logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  background: #fef2f2;
+  color: #ef4444;
+  border: 1.5px solid #fecaca;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.nb-drawer-logout:hover {
+  background: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .nb-hamburger  { display: flex; }
+  .nb-links-wrap { display: none; }
+  .nb-user-chip  { display: none; }
+  .nb-btn-logout { display: none; }
+  .nb-link.nb-link:not(.nb-link-active) { display: none; }
+
+  .nb-container { width: 94%; }
+}
+
+@media (max-width: 480px) {
+  .nb-logo span { display: none; }
+  .nb-btn-register { display: none; }
+}
