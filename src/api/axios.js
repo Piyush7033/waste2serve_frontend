@@ -4,7 +4,7 @@ import axios from "axios";
 // CREATE AXIOS INSTANCE
 // ==========================================
 const API = axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: "https://waste2servebackend-production.up.railway.app/api",
   headers: {
     "Content-Type": "application/json",
   },

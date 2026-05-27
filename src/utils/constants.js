@@ -1,5 +1,5 @@
 // API Base URL from environment
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://waste2servebackend-production.up.railway.app/api';
 
 // User Roles
 export const USER_ROLES = {
